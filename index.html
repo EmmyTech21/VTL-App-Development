@@ -1,0 +1,107 @@
+<html>
+
+<Head>
+ <title> JavaScript</title>
+</Head>
+
+<body>
+    <style>
+        body {
+            background-color: chartreuse;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+        }
+        h1{
+            margin-top: 300px;
+        }
+    </style>
+
+    <h1>JAVASCRIPT FUNDAMENTAL PART 1</h1>
+
+    <!-- <div>
+        <button onclick="decrement()" >-</button>
+        <span id="counter">0</span>
+        <button  onclick="increment()">+</button>
+    </div> -->
+
+   
+
+    <script href="/script.js">
+
+// Number DataTypes
+
+let price = 100;
+  console.log(price);
+
+ let addPrice = price + 10;
+  console.log(addPrice);
+
+let maxNumber = 9.9;
+console.log(maxNumber)
+
+// Strings 
+let name = 'john';
+let lastname = ' kendrick'
+console.log(name, lastname);
+
+// Boolean  means true or false
+let isActive = false;
+let isExpired = false;
+
+if(isActive === true) {
+    console.log(`${name} is active`)
+} else{
+    console.log(`${name} is inactive}`)
+};
+
+let add = 100 + 4;
+ let expo = 40 * 8;
+  console.log( expo);
+
+  console.log(add)
+
+// Welcome message
+console.log("Welcome to the Magic 8-Ball! 🎱");
+console.log("Ask me any 'Yes' or 'No' question, and I'll predict your future!");
+
+// List of possible answers
+const answers = [
+  "Yes, definitely!",
+  "No, not at all.",
+  "Maybe, try again later.",
+  "It is certain.",
+  "Ask again.",
+  "Don't count on it.",
+  "Absolutely!",
+  "I have no idea!"
+];
+
+// Prompt the user for a question
+const question = prompt("What's your question? (Type 'exit' to quit)");
+
+// Check if the question is valid
+if (question) {
+  if (question.toLowerCase() === "exit") {
+    console.log("Goodbye! Come back when you have more questions. 😊");
+  } else {
+    // Generate a random index for the answers array
+    const randomIndex = Math.floor(Math.random() * answers.length);
+
+    // Get the answer
+    const randomAnswer = answers[randomIndex];
+
+    // Display the answer
+    console.log(`You asked: "${question}"`);
+    console.log(`The Magic 8-Ball says: "${randomAnswer}"`);
+  }
+} else {
+  console.log("You didn't ask anything! Refresh and try again.");
+}
+
+
+    </script>
+    
+</body>
+</html>
