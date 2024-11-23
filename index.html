@@ -32,74 +32,143 @@
 
 // Number DataTypes
 
-let price = 100;
-  console.log(price);
+// let price = 100;
+//   console.log(price);
 
- let addPrice = price + 10;
-  console.log(addPrice);
+//  let addPrice = price + 10;
+//   console.log(addPrice);
 
-let maxNumber = 9.9;
-console.log(maxNumber)
+// let maxNumber = 9.9;
+// console.log(maxNumber)
 
-// Strings 
-let name = 'john';
-let lastname = ' kendrick'
-console.log(name, lastname);
+// // Strings 
+// let name = 'john';
+// let lastname = ' kendrick'
+// console.log(name, lastname);
 
-// Boolean  means true or false
-let isActive = false;
-let isExpired = false;
+// // Boolean  means true or false
+// let isActive = false;
+// let isExpired = false;
 
-if(isActive === true) {
-    console.log(`${name} is active`)
-} else{
-    console.log(`${name} is inactive}`)
-};
+// if(isActive === true) {
+//     console.log(`${name} is active`)
+// } else{
+//     console.log(`${name} is inactive}`)
+// };
 
-let add = 100 + 4;
- let expo = 40 * 8;
-  console.log( expo);
+// let add = 100 + 4;
+//  let expo = 40 * 8;
+//   console.log( expo);
 
-  console.log(add)
+//   console.log(add)
 
-// Welcome message
-console.log("Welcome to the Magic 8-Ball! 🎱");
-console.log("Ask me any 'Yes' or 'No' question, and I'll predict your future!");
+// // Welcome message
+// console.log("Welcome to the Magic 8-Ball! 🎱");
+// console.log("Ask me any 'Yes' or 'No' question, and I'll predict your future!");
 
-// List of possible answers
-const answers = [
-  "Yes, definitely!",
-  "No, not at all.",
-  "Maybe, try again later.",
-  "It is certain.",
-  "Ask again.",
-  "Don't count on it.",
-  "Absolutely!",
-  "I have no idea!"
-];
+// // List of possible answers
+// const answers = [
+//   "Yes, definitely!",
+//   "No, not at all.",
+//   "Maybe, try again later.",
+//   "It is certain.",
+//   "Ask again.",
+//   "Don't count on it.",
+//   "Absolutely!",
+//   "I have no idea!"
+// ];
 
-// Prompt the user for a question
-const question = prompt("What's your question? (Type 'exit' to quit)");
+// // Prompt the user for a question
+// const question = prompt("What's your question? (Type 'exit' to quit)");
 
-// Check if the question is valid
-if (question) {
-  if (question.toLowerCase() === "exit") {
-    console.log("Goodbye! Come back when you have more questions. 😊");
-  } else {
-    // Generate a random index for the answers array
-    const randomIndex = Math.floor(Math.random() * answers.length);
+// // Check if the question is valid
+// if (question) {
+//   if (question.toLowerCase() === "exit") {
+//     console.log("Goodbye! Come back when you have more questions. 😊");
+//   } else {
+//     // Generate a random index for the answers array
+//     const randomIndex = Math.floor(Math.random() * answers.length);
 
-    // Get the answer
-    const randomAnswer = answers[randomIndex];
+//     // Get the answer
+//     const randomAnswer = answers[randomIndex];
 
-    // Display the answer
-    console.log(`You asked: "${question}"`);
-    console.log(`The Magic 8-Ball says: "${randomAnswer}"`);
+//     // Display the answer
+//     console.log(`You asked: "${question}"`);
+//     console.log(`The Magic 8-Ball says: "${randomAnswer}"`);
+//   }
+// } else {
+//   console.log("You didn't ask anything! Refresh and try again.");
+// }
+
+
+// 1) Array
+ const fruits = ['apple', 'orange',  'banana', 'apple',  ];
+ 
+// Add at the beginning: unshift().
+ const data1 = fruits.unshift('cumcumber');
+  console.log(data1);
+
+console.log(fruits);
+
+// Add at the end: push().
+ const addmore= [1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+ console.log(addmore)
+ addmore.push(15)
+
+//  Remove the first element: shift().
+addmore.shift();
+
+
+// Remove the last element: pop().
+addmore.pop();
+
+addmore.forEach((num)=> {
+  num+num;
+ console.log(num);
+
+})
+
+const cars = ['venza', 'lezus', 'Dodge', 'camry'];
+
+cars.concat()
+
+console.log(cars)
+
+// 2) Strings
+ let name = 'loveth'
+//  Use string[index] to access a specific character.
+ console.log(name[4])
+
+
+ const shoppingList = [];
+
+while (true) {
+  const action = prompt("Do you want to add, remove, or view your shopping list? (type 'exit' to quit)");
+  
+  if (action === "exit") {
+    console.log("Goodbye!");
+    break;
   }
-} else {
-  console.log("You didn't ask anything! Refresh and try again.");
-}
 
+  if (action === "add") {
+    const item = prompt("What do you want to add?");
+    shoppingList.push(item);
+    console.log(`${item} added to your shopping list.`);
+  } else if (action === "remove") {
+    const item = prompt("What do you want to remove?");
+    const index = shoppingList.indexOf(item);
+    if (index > -1) {
+      shoppingList.splice(index, 1);
+      console.log(`${item} removed from your shopping list.`);
+    } else {
+      console.log(`${item} not found in your shopping list.`);
+    }
+  } else if (action === "view") {
+    console.log("Your shopping list: " + shoppingList.join(", "));
+  } else {
+    console.log("Invalid action. Please type 'add', 'remove', or 'view'.");
+  }
+}
 
     </script>
     

@@ -65,3 +65,35 @@
 
 // // Start the game
 // playGame();
+
+
+
+const shoppingList = [];
+
+while (true) {
+  const action = prompt("Do you want to add, remove, or view your shopping list? (type 'exit' to quit)");
+  
+  if (action === "exit") {
+    console.log("Goodbye!");
+    break;
+  }
+
+  if (action === "add") {
+    const item = prompt("What do you want to add?");
+    shoppingList.push(item);
+    console.log(`${item} added to your shopping list.`);
+  } else if (action === "remove") {
+    const item = prompt("What do you want to remove?");
+    const index = shoppingList.indexOf(item);
+    if (index > -1) {
+      shoppingList.splice(index, 1);
+      console.log(`${item} removed from your shopping list.`);
+    } else {
+      console.log(`${item} not found in your shopping list.`);
+    }
+  } else if (action === "view") {
+    console.log("Your shopping list: " + shoppingList.join(", "));
+  } else {
+    console.log("Invalid action. Please type 'add', 'remove', or 'view'.");
+  }
+}

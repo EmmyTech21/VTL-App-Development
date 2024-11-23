@@ -1,0 +1,3 @@
+Shopping List
+Description: Create a program that lets users add items to a shopping list, remove an item, and display the list as a sentence.
+Code:
